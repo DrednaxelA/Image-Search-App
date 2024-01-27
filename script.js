@@ -43,15 +43,6 @@ async function searchImages() { // async due to response + fetch
         moreResultsButton.style.display = "block";
     }
 }
-const isFirstVisit = localStorage.getItem('isFirstVisit');
-
-if (!isFirstVisit) {
-    // Clear searchResults if it's the first visit
-    searchResults.innerHTML = "";
-    // Set flag to indicate that it's not the first visit
-    localStorage.setItem('isFirstVisit', 'false');
-}
-
 searchField.addEventListener("submit", (event) => { // listen to the "Go!" button
     event.preventDefault();
     page = 1;
